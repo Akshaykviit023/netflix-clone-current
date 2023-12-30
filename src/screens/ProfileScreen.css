@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.profileScreen{
+    height: 100vh;
+    color: white;
+    background: url("https://img.helpnetsecurity.com/wp-content/uploads/2020/03/23143409/netflix-collection.jpg")
+    center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background__gradient{
+    
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(59, 58, 56) 0,
+        rgba(167, 166, 165, 0.5) 50%,
+        rgba(59, 58, 56) 100%
+    );
+    position: absolute;
+}
+.profileScreen__body{
+  position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding-top: 6%;
+}
+@media only screen and (max-width: 800px) {
+    .profileScreen__body{
+        scale: 0.8;
+    }
+    
+
+}
+@media only screen and (max-width: 630px) {
+    .profileScreen__body{
+        scale: 0.5;
+        
+    }
+    .profile > img, .profile__status{
+        scale: 1.3;
+    }
+    .profile__status{
+        margin-left: 30px;
+    }
+}
+    
+.profileScreen__body > h1{
+    font-size: 40px;
+}
+.profileScreen__info{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.profile__status {
+    padding-left: 30px;
+}
+
+.profile__status > button{
+    font-weight: 700;
+    margin-top: 9px;
+    border: none;
+    color: white;
+    background-color: #e50914;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+}
+.profile__status > button:hover{
+    background-color: #b3060f;
+}
+.profile__status >h2{
+    font-size: 18px;
+}
+.profile{
+    padding-top: 20px;
+    display: flex;
+    background-color: #3B3A38;
+    max-width: 750px;
+    border-radius: 10px;
+    height: 80px;
+}
+.profileScreen__info > .profile > img{
+    height: 60px;
+    width: 60px;
+    padding-left: 20px;
+    position: relative;
+}
+.profileScreen__info > .profileScreen__details{
+    position: relative;
+    padding-top: 30px;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+.profileScreen__plans{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 400px;
+    width: 750px;
+    background-image: linear-gradient(to bottom right, #3B3A38, #F7F4F4);
+    position: relative;
+    border-radius: 10px;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+
+.standard__plan > .plan__contents, .HD__plan > .plan__contents, .ultraHD__plan > .plan__contents{
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+
+.standard__plan, .HD__plan, .ultraHD__plan{
+    height: 400px;
+    width: 250px;
+    transition: ease-out;
+    transition-duration: 0.2s;
+    
+}
+
+.profileScreen__plans h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+.profileScreen__plans p{
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.profileScreen__plans .price{
+    font-size: 42px;
+    padding-top: 50px;
+    font-weight: 500;
+}
+.profileScreen__plans .price > sub{
+    font-size: 24px;
+    padding-top: 60px;
+}
+
+.profileScreen__plans ul{
+    list-style-type: circle;
+  padding: 0;
+  margin-left: 20px;
+  font-size: 13px;
+  bottom: 70px;
+  position: absolute;
+}
+.profileScreen__plans ul > li{
+    padding-top: 10px;
+}
+
+.standard__plan:hover, .HD__plan:hover, .ultraHD__plan:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: ease-out;
+    transition-duration: 0.2s;
+    background-image: linear-gradient(to bottom, #F7F4F4, #A7A6A5);
+    z-index:1;
+    border-radius: 10px;
+}
+.standard__plan:hover h1, .HD__plan:hover h1, .ultraHD__plan:hover h1{
+    color: #e50914;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+.standard__plan:hover p, .HD__plan:hover p, .ultraHD__plan:hover p{
+    color: #858482;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+.standard__plan:hover .price, .HD__plan:hover .price, .ultraHD__plan:hover .price{
+    color: #e50914;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+.standard__plan:hover sub, .HD__plan:hover sub, .ultraHD__plan:hover sub{
+    color: #858482;
+    transition: ease-in;
+    transition-duration: 0.2s;
+}
+.standard__plan:hover ul, .HD__plan:hover ul, .ultraHD__plan:hover ul{
+    color: #706f6e;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+.plan__contents > button{
+    background-color: white;
+    color: #706f6e;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    position: relative;
+    top:150px;
+    left: 110px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-out;
+    transition-duration: 0.2s;
+
+}
+.standard__plan:hover button, .HD__plan:hover button, .ultraHD__plan:hover button{
+    width: 100px;
+    transition: ease-out;
+    transition-duration: 0.2s;
+    background-color: #e50914;
+    color: white;
+    
+}
